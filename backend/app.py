@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from openai import OpenAI
 import os
-import uuid
+from prompts import STAGE_1_PROMPT
 
 app = Flask(__name__)
 CORS(app)
@@ -38,9 +38,7 @@ def chat():
 
     # Add system instructions if it's the first message
     if len(chat_context) == 1:
-        chat_context.insert(0, {"role": "system", "content": "You are an assistant specializing in recommending "
-                                                             "Mercedes-Benz electric vehicles. The customer is looking "
-                                                             "for a new car."})
+        chat_context.insert(0, {"role": "system", "content": STAGE_1_PROMPT})
 
     # Get response from OpenAI
     response = client.chat.completions.create(
@@ -55,6 +53,7 @@ def chat():
     # Return the response along with the session ID for future requests
     print(f"Session ID: {session_id}\n User: {user_message}\n AI: {ai_response}")
     return jsonify({'response': ai_response, 'session_id': session_id})
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
