@@ -36,6 +36,25 @@ def extract_json_from_text(text):
     return parsed_json
 
 
+def cut_json(text):
+    # Regular expression to find JSON-like patterns
+    json_pattern = re.compile(r"\{.*?\}", re.DOTALL)  # Matches JSON-like objects
+
+    # Find the first JSON-like pattern
+    match = json_pattern.search(text)  # Finds the first occurrence of JSON
+
+    if match:
+        json_start = match.start()  # Start index of the JSON pattern
+
+        # Cut out everything after the JSON
+        remaining_text = text[:json_start]  # Everything from the start to the end of the JSON
+
+        return remaining_text
+    else:
+        # If no JSON pattern is found, return the entire text
+        return text
+
+
 @app.route('/chat', methods=['POST'])
 def chat():
     print("Request received")
@@ -73,6 +92,7 @@ def chat():
     chat_histories[session_id].append({"role": "assistant", "content": ai_response})
 
     car_recommendations = extract_json_from_text(ai_response)
+    ai_response = cut_json(ai_response)
 
     # Return the response along with the session ID for future requests
     print(f"Session ID: {session_id}\n User: {user_message}\n AI: {ai_response}")
