@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from openai import OpenAI
 import os
 import uuid
 
 app = Flask(__name__)
+CORS(app)
 
 # Set OpenAI API key in environment variable
 client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
@@ -14,6 +16,7 @@ chat_histories = {}
 
 @app.route('/chat', methods=['POST'])
 def chat():
+    print("Request received")
     session_id = request.json.get('session_id')
     user_message = request.json.get('message')
 
@@ -50,6 +53,7 @@ def chat():
     chat_histories[session_id].append({"role": "assistant", "content": ai_response})
 
     # Return the response along with the session ID for future requests
+    print(f"Session ID: {session_id}\n User: {user_message}\n AI: {ai_response}")
     return jsonify({'response': ai_response, 'session_id': session_id})
 
 if __name__ == '__main__':

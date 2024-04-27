@@ -1,0 +1,67 @@
+/* Apply basic styles to the chat history container */
+.chat-history {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between bubbles */
+}
+
+/* Define styles for user and assistant bubbles */
+.chat-message {
+    max-width: 60%; /* Limit bubble width */
+    padding: 10px;
+    border-radius: 15px;
+    position: relative; /* For speech bubble tail */
+}
+
+/* Style for user message bubbles */
+.chat-message.user {
+    background-color: #d1e7dd; /* Light green */
+    align-self: flex-end; /* Align to the right */
+    text-align: right;
+}
+
+/* Add speech bubble tail for user messages */
+.chat-message.user::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #d1e7dd; /* Match bubble color */
+}
+
+/* Style for assistant message bubbles */
+.chat-message.assistant {
+    background-color: #f8d7da; /* Light pink */
+    align-self: flex-start; /* Align to the left */
+    text-align: left;
+}
+
+/* Add speech bubble tail for assistant messages */
+.chat-message.assistant::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #f8d7da; /* Match bubble color */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input {
+    flex: 1;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
