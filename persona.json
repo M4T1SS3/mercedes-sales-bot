@@ -1,0 +1,109 @@
+[
+  {
+    "ProfileName": "Franz - The Discerning Connoisseur",
+    "Demographics": {
+      "Share": "4%",
+      "Age": "averages 39 years",
+      "Gender": "predominantly male",
+      "Income": "high income",
+      "Location": "rural areas, smaller cities, or suburbs",
+      "Occupation": "leadership roles or retired"
+    },
+    "Psychology": {
+      "PriceSensitivity": "low",
+      "BrandLoyalty": "high",
+      "Interests": ["tennis", "theater", "cruising"],
+      "OtherTraits": ["traditional", "quality-oriented"]
+    },
+    "CustomerExperience": {
+      "Communication": ["digital in early stages", "prefers phone for bookings"],
+      "Service": ["traditional transactions", "likes pick-up service"]
+    },
+    "Marketing": {
+      "Strategy": "High-end luxury",
+      "TargetGroup": "classic luxury-seekers",
+      "Approach": ["personalized service", "willingness to pay for luxury"]
+    }
+  },
+  {
+    "ProfileName": "Sally - The Driven Trendsetter",
+    "Demographics": {
+      "Share": "14%",
+      "Age": "averages 32 years",
+      "Gender": "slightly more males, with significant female representation",
+      "Income": "third highest among all personas",
+      "Location": "mainly in megacities",
+      "Occupation": "management roles",
+      "FamilyStatus": "many childless couples"
+    },
+    "Psychology": {
+      "PriceSensitivity": "low",
+      "BrandLoyalty": "high",
+      "RiskTolerance": "high",
+      "OtherTraits": ["impulsivity", "seeks social validation", "less sustainability-focused"]
+    },
+    "CustomerExperience": {
+      "Communication": ["influenced by social circles", "prefers digital communication"],
+      "Service": ["accepts service contracts", "generally service-oriented"]
+    },
+    "Marketing": {
+      "Strategy": "Premium with a digital flair",
+      "TargetGroup": "classic luxury-seekers with a modern twist",
+      "Approach": ["digitally oriented", "aligns with social trends"]
+    }
+  },
+  {
+    "ProfileName": "Peter - The Tech-Savvy Auto Enthusiast",
+    "Demographics": {
+      "Share": "8%",
+      "Age": "averages 34 years",
+      "Gender": "predominantly male",
+      "Income": "high income",
+      "Location": "mostly in large cities",
+      "Occupation": "management roles",
+      "FamilyStatus": "many with children"
+    },
+    "Psychology": {
+      "PriceSensitivity": "moderate",
+      "BrandLoyalty": "high",
+      "RiskTolerance": "moderate",
+      "OtherTraits": ["tech-oriented", "high quality standards", "environmentally conscious"]
+    },
+    "CustomerExperience": {
+      "Communication": ["prefers digital channels", "sustainability-oriented"],
+      "Service": ["digital in all phases", "high expectations for quality"]
+    },
+    "Marketing": {
+      "Strategy": "Premium with a digital focus",
+      "TargetGroup": ["tech-savvy customers", "value sustainability"],
+      "Approach": ["combination of digital and personal service"]
+    }
+  },
+  {
+    "ProfileName": "Viola - The Value-Conscious Relationship Builder",
+    "Demographics": {
+      "Share": "33%",
+      "Age": "averages 47 years",
+      "Gender": "predominantly male",
+      "Income": "among the lower income brackets",
+      "Location": "mainly in rural areas and smaller towns",
+      "Occupation": "many retirees",
+      "FamilyStatus": "few children, possibly because they are adults"
+    },
+    "Psychology": {
+      "PriceSensitivity": "high",
+      "BrandLoyalty": "low",
+      "RiskTolerance": "low",
+      "OtherTraits": ["prefers local services", "interested in maintenance"]
+    },
+    "CustomerExperience": {
+      "Communication": ["prefers phone", "selectively digital"],
+      "Service": ["compares prices", "focused on mid-range vehicles"]
+    },
+    "Marketing": {
+      "Strategy": "Value-oriented",
+      "TargetGroup": ["value-conscious customers", "seek personal relationships"],
+      "Approach": ["quality and service at a fair price"]
+    }
+  }
+]
