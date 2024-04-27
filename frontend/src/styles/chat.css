@@ -1,0 +1,38 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the container fills the entire viewport */
+  }
+  
+  .chat-history {
+    flex: 1; /* Allow chat history to grow and fill remaining space */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds container height */
+    overflow-x: hidden;
+    max-height: 75vh;
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+
+  }
+
+  @media (max-width: 768px) {
+    .chat-history {
+      max-height: 85vh; /* Adjust max-height for smaller screens */
+    }
+  }
+
+  .chat-history::-webkit-scrollbar {
+    display: none; /* WebKit */
+  }
+  
+  .form-container {
+    position: sticky;
+    bottom: 0;
+    background-color: #ffffff00;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visual separation */
+  }
+  
