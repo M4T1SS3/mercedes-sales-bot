@@ -1,0 +1,397 @@
+PERSONA,STRONG LOCATION,AGE,INCOME LEVEL,LOCATION TYPE,VEHICLE PREFERENCES,SERVICE PREFERENCES,BRAND LOYALTY,DIGITAL ENGAGEMENT,PSYCHOLOGICAL TRAITS
+1,USA,39,HIGHEST,rural,large,phone,high,traditional,luxury
+1,USA,39,HIGHEST,rural,large,phone,high,traditional,convenience
+1,USA,39,HIGHEST,rural,large,phone,high,traditional,quality
+1,USA,39,HIGHEST,rural,large,phone,brand,traditional,luxury
+1,USA,39,HIGHEST,rural,large,phone,brand,traditional,convenience
+1,USA,39,HIGHEST,rural,large,phone,brand,traditional,quality
+1,USA,39,HIGHEST,rural,large,click,high,traditional,luxury
+1,USA,39,HIGHEST,rural,large,click,high,traditional,convenience
+1,USA,39,HIGHEST,rural,large,click,high,traditional,quality
+1,USA,39,HIGHEST,rural,large,click,brand,traditional,luxury
+1,USA,39,HIGHEST,rural,large,click,brand,traditional,convenience
+1,USA,39,HIGHEST,rural,large,click,brand,traditional,quality
+1,USA,39,HIGHEST,rural,luxury,phone,high,traditional,luxury
+1,USA,39,HIGHEST,rural,luxury,phone,high,traditional,convenience
+1,USA,39,HIGHEST,rural,luxury,phone,high,traditional,quality
+1,USA,39,HIGHEST,rural,luxury,phone,brand,traditional,luxury
+1,USA,39,HIGHEST,rural,luxury,phone,brand,traditional,convenience
+1,USA,39,HIGHEST,rural,luxury,phone,brand,traditional,quality
+1,USA,39,HIGHEST,rural,luxury,click,high,traditional,luxury
+1,USA,39,HIGHEST,rural,luxury,click,high,traditional,convenience
+1,USA,39,HIGHEST,rural,luxury,click,high,traditional,quality
+1,USA,39,HIGHEST,rural,luxury,click,brand,traditional,luxury
+1,USA,39,HIGHEST,rural,luxury,click,brand,traditional,convenience
+1,USA,39,HIGHEST,rural,luxury,click,brand,traditional,quality
+1,USA,39,HIGHEST,small,large,phone,high,traditional,luxury
+1,USA,39,HIGHEST,small,large,phone,high,traditional,convenience
+1,USA,39,HIGHEST,small,large,phone,high,traditional,quality
+1,USA,39,HIGHEST,small,large,phone,brand,traditional,luxury
+1,USA,39,HIGHEST,small,large,phone,brand,traditional,convenience
+1,USA,39,HIGHEST,small,large,phone,brand,traditional,quality
+1,USA,39,HIGHEST,small,large,click,high,traditional,luxury
+1,USA,39,HIGHEST,small,large,click,high,traditional,convenience
+1,USA,39,HIGHEST,small,large,click,high,traditional,quality
+1,USA,39,HIGHEST,small,large,click,brand,traditional,luxury
+1,USA,39,HIGHEST,small,large,click,brand,traditional,convenience
+1,USA,39,HIGHEST,small,large,click,brand,traditional,quality
+1,USA,39,HIGHEST,small,luxury,phone,high,traditional,luxury
+1,USA,39,HIGHEST,small,luxury,phone,high,traditional,convenience
+1,USA,39,HIGHEST,small,luxury,phone,high,traditional,quality
+1,USA,39,HIGHEST,small,luxury,phone,brand,traditional,luxury
+1,USA,39,HIGHEST,small,luxury,phone,brand,traditional,convenience
+1,USA,39,HIGHEST,small,luxury,phone,brand,traditional,quality
+1,USA,39,HIGHEST,small,luxury,click,high,traditional,luxury
+1,USA,39,HIGHEST,small,luxury,click,high,traditional,convenience
+1,USA,39,HIGHEST,small,luxury,click,high,traditional,quality
+1,USA,39,HIGHEST,small,luxury,click,brand,traditional,luxury
+1,USA,39,HIGHEST,small,luxury,click,brand,traditional,convenience
+1,USA,39,HIGHEST,small,luxury,click,brand,traditional,quality
+1,USA,39,HIGHEST,suburbs,large,phone,high,traditional,luxury
+1,USA,39,HIGHEST,suburbs,large,phone,high,traditional,convenience
+1,USA,39,HIGHEST,suburbs,large,phone,high,traditional,quality
+1,USA,39,HIGHEST,suburbs,large,phone,brand,traditional,luxury
+1,USA,39,HIGHEST,suburbs,large,phone,brand,traditional,convenience
+1,USA,39,HIGHEST,suburbs,large,phone,brand,traditional,quality
+1,USA,39,HIGHEST,suburbs,large,click,high,traditional,luxury
+1,USA,39,HIGHEST,suburbs,large,click,high,traditional,convenience
+1,USA,39,HIGHEST,suburbs,large,click,high,traditional,quality
+1,USA,39,HIGHEST,suburbs,large,click,brand,traditional,luxury
+1,USA,39,HIGHEST,suburbs,large,click,brand,traditional,convenience
+1,USA,39,HIGHEST,suburbs,large,click,brand,traditional,quality
+1,USA,39,HIGHEST,suburbs,luxury,phone,high,traditional,luxury
+1,USA,39,HIGHEST,suburbs,luxury,phone,high,traditional,convenience
+1,USA,39,HIGHEST,suburbs,luxury,phone,high,traditional,quality
+1,USA,39,HIGHEST,suburbs,luxury,phone,brand,traditional,luxury
+1,USA,39,HIGHEST,suburbs,luxury,phone,brand,traditional,convenience
+1,USA,39,HIGHEST,suburbs,luxury,phone,brand,traditional,quality
+1,USA,39,HIGHEST,suburbs,luxury,click,high,traditional,luxury
+1,USA,39,HIGHEST,suburbs,luxury,click,high,traditional,convenience
+1,USA,39,HIGHEST,suburbs,luxury,click,high,traditional,quality
+1,USA,39,HIGHEST,suburbs,luxury,click,brand,traditional,luxury
+1,USA,39,HIGHEST,suburbs,luxury,click,brand,traditional,convenience
+1,USA,39,HIGHEST,suburbs,luxury,click,brand,traditional,quality
+1,UK,39,HIGHEST,rural,large,phone,high,traditional,luxury
+1,UK,39,HIGHEST,rural,large,phone,high,traditional,convenience
+1,UK,39,HIGHEST,rural,large,phone,high,traditional,quality
+1,UK,39,HIGHEST,rural,large,phone,brand,traditional,luxury
+1,UK,39,HIGHEST,rural,large,phone,brand,traditional,convenience
+1,UK,39,HIGHEST,rural,large,phone,brand,traditional,quality
+1,UK,39,HIGHEST,rural,large,click,high,traditional,luxury
+1,UK,39,HIGHEST,rural,large,click,high,traditional,convenience
+1,UK,39,HIGHEST,rural,large,click,high,traditional,quality
+1,UK,39,HIGHEST,rural,large,click,brand,traditional,luxury
+1,UK,39,HIGHEST,rural,large,click,brand,traditional,convenience
+1,UK,39,HIGHEST,rural,large,click,brand,traditional,quality
+1,UK,39,HIGHEST,rural,luxury,phone,high,traditional,luxury
+1,UK,39,HIGHEST,rural,luxury,phone,high,traditional,convenience
+1,UK,39,HIGHEST,rural,luxury,phone,high,traditional,quality
+1,UK,39,HIGHEST,rural,luxury,phone,brand,traditional,luxury
+1,UK,39,HIGHEST,rural,luxury,phone,brand,traditional,convenience
+1,UK,39,HIGHEST,rural,luxury,phone,brand,traditional,quality
+1,UK,39,HIGHEST,rural,luxury,click,high,traditional,luxury
+1,UK,39,HIGHEST,rural,luxury,click,high,traditional,convenience
+1,UK,39,HIGHEST,rural,luxury,click,high,traditional,quality
+1,UK,39,HIGHEST,rural,luxury,click,brand,traditional,luxury
+1,UK,39,HIGHEST,rural,luxury,click,brand,traditional,convenience
+1,UK,39,HIGHEST,rural,luxury,click,brand,traditional,quality
+1,UK,39,HIGHEST,small,large,phone,high,traditional,luxury
+1,UK,39,HIGHEST,small,large,phone,high,traditional,convenience
+1,UK,39,HIGHEST,small,large,phone,high,traditional,quality
+1,UK,39,HIGHEST,small,large,phone,brand,traditional,luxury
+1,UK,39,HIGHEST,small,large,phone,brand,traditional,convenience
+1,UK,39,HIGHEST,small,large,phone,brand,traditional,quality
+1,UK,39,HIGHEST,small,large,click,high,traditional,luxury
+1,UK,39,HIGHEST,small,large,click,high,traditional,convenience
+1,UK,39,HIGHEST,small,large,click,high,traditional,quality
+1,UK,39,HIGHEST,small,large,click,brand,traditional,luxury
+1,UK,39,HIGHEST,small,large,click,brand,traditional,convenience
+1,UK,39,HIGHEST,small,large,click,brand,traditional,quality
+1,UK,39,HIGHEST,small,luxury,phone,high,traditional,luxury
+1,UK,39,HIGHEST,small,luxury,phone,high,traditional,convenience
+1,UK,39,HIGHEST,small,luxury,phone,high,traditional,quality
+1,UK,39,HIGHEST,small,luxury,phone,brand,traditional,luxury
+1,UK,39,HIGHEST,small,luxury,phone,brand,traditional,convenience
+1,UK,39,HIGHEST,small,luxury,phone,brand,traditional,quality
+1,UK,39,HIGHEST,small,luxury,click,high,traditional,luxury
+1,UK,39,HIGHEST,small,luxury,click,high,traditional,convenience
+1,UK,39,HIGHEST,small,luxury,click,high,traditional,quality
+1,UK,39,HIGHEST,small,luxury,click,brand,traditional,luxury
+1,UK,39,HIGHEST,small,luxury,click,brand,traditional,convenience
+1,UK,39,HIGHEST,small,luxury,click,brand,traditional,quality
+1,UK,39,HIGHEST,suburbs,large,phone,high,traditional,luxury
+1,UK,39,HIGHEST,suburbs,large,phone,high,traditional,convenience
+1,UK,39,HIGHEST,suburbs,large,phone,high,traditional,quality
+1,UK,39,HIGHEST,suburbs,large,phone,brand,traditional,luxury
+1,UK,39,HIGHEST,suburbs,large,phone,brand,traditional,convenience
+1,UK,39,HIGHEST,suburbs,large,phone,brand,traditional,quality
+1,UK,39,HIGHEST,suburbs,large,click,high,traditional,luxury
+1,UK,39,HIGHEST,suburbs,large,click,high,traditional,convenience
+1,UK,39,HIGHEST,suburbs,large,click,high,traditional,quality
+1,UK,39,HIGHEST,suburbs,large,click,brand,traditional,luxury
+1,UK,39,HIGHEST,suburbs,large,click,brand,traditional,convenience
+1,UK,39,HIGHEST,suburbs,large,click,brand,traditional,quality
+1,UK,39,HIGHEST,suburbs,luxury,phone,high,traditional,luxury
+1,UK,39,HIGHEST,suburbs,luxury,phone,high,traditional,convenience
+1,UK,39,HIGHEST,suburbs,luxury,phone,high,traditional,quality
+1,UK,39,HIGHEST,suburbs,luxury,phone,brand,traditional,luxury
+1,UK,39,HIGHEST,suburbs,luxury,phone,brand,traditional,convenience
+1,UK,39,HIGHEST,suburbs,luxury,phone,brand,traditional,quality
+1,UK,39,HIGHEST,suburbs,luxury,click,high,traditional,luxury
+1,UK,39,HIGHEST,suburbs,luxury,click,high,traditional,convenience
+1,UK,39,HIGHEST,suburbs,luxury,click,high,traditional,quality
+1,UK,39,HIGHEST,suburbs,luxury,click,brand,traditional,luxury
+1,UK,39,HIGHEST,suburbs,luxury,click,brand,traditional,convenience
+1,UK,39,HIGHEST,suburbs,luxury,click,brand,traditional,quality
+1,Germany,39,HIGHEST,rural,large,phone,high,traditional,luxury
+1,Germany,39,HIGHEST,rural,large,phone,high,traditional,convenience
+1,Germany,39,HIGHEST,rural,large,phone,high,traditional,quality
+1,Germany,39,HIGHEST,rural,large,phone,brand,traditional,luxury
+1,Germany,39,HIGHEST,rural,large,phone,brand,traditional,convenience
+1,Germany,39,HIGHEST,rural,large,phone,brand,traditional,quality
+1,Germany,39,HIGHEST,rural,large,click,high,traditional,luxury
+1,Germany,39,HIGHEST,rural,large,click,high,traditional,convenience
+1,Germany,39,HIGHEST,rural,large,click,high,traditional,quality
+1,Germany,39,HIGHEST,rural,large,click,brand,traditional,luxury
+1,Germany,39,HIGHEST,rural,large,click,brand,traditional,convenience
+1,Germany,39,HIGHEST,rural,large,click,brand,traditional,quality
+1,Germany,39,HIGHEST,rural,luxury,phone,high,traditional,luxury
+1,Germany,39,HIGHEST,rural,luxury,phone,high,traditional,convenience
+1,Germany,39,HIGHEST,rural,luxury,phone,high,traditional,quality
+1,Germany,39,HIGHEST,rural,luxury,phone,brand,traditional,luxury
+1,Germany,39,HIGHEST,rural,luxury,phone,brand,traditional,convenience
+1,Germany,39,HIGHEST,rural,luxury,phone,brand,traditional,quality
+1,Germany,39,HIGHEST,rural,luxury,click,high,traditional,luxury
+1,Germany,39,HIGHEST,rural,luxury,click,high,traditional,convenience
+1,Germany,39,HIGHEST,rural,luxury,click,high,traditional,quality
+1,Germany,39,HIGHEST,rural,luxury,click,brand,traditional,luxury
+1,Germany,39,HIGHEST,rural,luxury,click,brand,traditional,convenience
+1,Germany,39,HIGHEST,rural,luxury,click,brand,traditional,quality
+1,Germany,39,HIGHEST,small,large,phone,high,traditional,luxury
+1,Germany,39,HIGHEST,small,large,phone,high,traditional,convenience
+1,Germany,39,HIGHEST,small,large,phone,high,traditional,quality
+1,Germany,39,HIGHEST,small,large,phone,brand,traditional,luxury
+1,Germany,39,HIGHEST,small,large,phone,brand,traditional,convenience
+1,Germany,39,HIGHEST,small,large,phone,brand,traditional,quality
+1,Germany,39,HIGHEST,small,large,click,high,traditional,luxury
+1,Germany,39,HIGHEST,small,large,click,high,traditional,convenience
+1,Germany,39,HIGHEST,small,large,click,high,traditional,quality
+1,Germany,39,HIGHEST,small,large,click,brand,traditional,luxury
+1,Germany,39,HIGHEST,small,large,click,brand,traditional,convenience
+1,Germany,39,HIGHEST,small,large,click,brand,traditional,quality
+1,Germany,39,HIGHEST,small,luxury,phone,high,traditional,luxury
+1,Germany,39,HIGHEST,small,luxury,phone,high,traditional,convenience
+1,Germany,39,HIGHEST,small,luxury,phone,high,traditional,quality
+1,Germany,39,HIGHEST,small,luxury,phone,brand,traditional,luxury
+1,Germany,39,HIGHEST,small,luxury,phone,brand,traditional,convenience
+1,Germany,39,HIGHEST,small,luxury,phone,brand,traditional,quality
+1,Germany,39,HIGHEST,small,luxury,click,high,traditional,luxury
+1,Germany,39,HIGHEST,small,luxury,click,high,traditional,convenience
+1,Germany,39,HIGHEST,small,luxury,click,high,traditional,quality
+1,Germany,39,HIGHEST,small,luxury,click,brand,traditional,luxury
+1,Germany,39,HIGHEST,small,luxury,click,brand,traditional,convenience
+1,Germany,39,HIGHEST,small,luxury,click,brand,traditional,quality
+1,Germany,39,HIGHEST,suburbs,large,phone,high,traditional,luxury
+1,Germany,39,HIGHEST,suburbs,large,phone,high,traditional,convenience
+1,Germany,39,HIGHEST,suburbs,large,phone,high,traditional,quality
+1,Germany,39,HIGHEST,suburbs,large,phone,brand,traditional,luxury
+1,Germany,39,HIGHEST,suburbs,large,phone,brand,traditional,convenience
+1,Germany,39,HIGHEST,suburbs,large,phone,brand,traditional,quality
+1,Germany,39,HIGHEST,suburbs,large,click,high,traditional,luxury
+1,Germany,39,HIGHEST,suburbs,large,click,high,traditional,convenience
+1,Germany,39,HIGHEST,suburbs,large,click,high,traditional,quality
+1,Germany,39,HIGHEST,suburbs,large,click,brand,traditional,luxury
+1,Germany,39,HIGHEST,suburbs,large,click,brand,traditional,convenience
+1,Germany,39,HIGHEST,suburbs,large,click,brand,traditional,quality
+1,Germany,39,HIGHEST,suburbs,luxury,phone,high,traditional,luxury
+1,Germany,39,HIGHEST,suburbs,luxury,phone,high,traditional,convenience
+1,Germany,39,HIGHEST,suburbs,luxury,phone,high,traditional,quality
+1,Germany,39,HIGHEST,suburbs,luxury,phone,brand,traditional,luxury
+1,Germany,39,HIGHEST,suburbs,luxury,phone,brand,traditional,convenience
+1,Germany,39,HIGHEST,suburbs,luxury,phone,brand,traditional,quality
+1,Germany,39,HIGHEST,suburbs,luxury,click,high,traditional,luxury
+1,Germany,39,HIGHEST,suburbs,luxury,click,high,traditional,convenience
+1,Germany,39,HIGHEST,suburbs,luxury,click,high,traditional,quality
+1,Germany,39,HIGHEST,suburbs,luxury,click,brand,traditional,luxury
+1,Germany,39,HIGHEST,suburbs,luxury,click,brand,traditional,convenience
+1,Germany,39,HIGHEST,suburbs,luxury,click,brand,traditional,quality
+2,China,32,HIGH,urban,entry,contract,high,digital,validation
+2,China,32,HIGH,urban,entry,contract,high,digital,trends
+2,China,32,HIGH,urban,entry,contract,brand,digital,validation
+2,China,32,HIGH,urban,entry,contract,brand,digital,trends
+2,China,32,HIGH,urban,luxury,contract,high,digital,validation
+2,China,32,HIGH,urban,luxury,contract,high,digital,trends
+2,China,32,HIGH,urban,luxury,contract,brand,digital,validation
+2,China,32,HIGH,urban,luxury,contract,brand,digital,trends
+2,China,32,HIGH,urban,modern,contract,high,digital,validation
+2,China,32,HIGH,urban,modern,contract,high,digital,trends
+2,China,32,HIGH,urban,modern,contract,brand,digital,validation
+2,China,32,HIGH,urban,modern,contract,brand,digital,trends
+2,China,32,HIGH,urban,executive,contract,high,digital,validation
+2,China,32,HIGH,urban,executive,contract,high,digital,trends
+2,China,32,HIGH,urban,executive,contract,brand,digital,validation
+2,China,32,HIGH,urban,executive,contract,brand,digital,trends
+2,China,32,HIGH,megacity,entry,contract,high,digital,validation
+2,China,32,HIGH,megacity,entry,contract,high,digital,trends
+2,China,32,HIGH,megacity,entry,contract,brand,digital,validation
+2,China,32,HIGH,megacity,entry,contract,brand,digital,trends
+2,China,32,HIGH,megacity,luxury,contract,high,digital,validation
+2,China,32,HIGH,megacity,luxury,contract,high,digital,trends
+2,China,32,HIGH,megacity,luxury,contract,brand,digital,validation
+2,China,32,HIGH,megacity,luxury,contract,brand,digital,trends
+2,China,32,HIGH,megacity,modern,contract,high,digital,validation
+2,China,32,HIGH,megacity,modern,contract,high,digital,trends
+2,China,32,HIGH,megacity,modern,contract,brand,digital,validation
+2,China,32,HIGH,megacity,modern,contract,brand,digital,trends
+2,China,32,HIGH,megacity,executive,contract,high,digital,validation
+2,China,32,HIGH,megacity,executive,contract,high,digital,trends
+2,China,32,HIGH,megacity,executive,contract,brand,digital,validation
+2,China,32,HIGH,megacity,executive,contract,brand,digital,trends
+2,France,32,HIGH,urban,entry,contract,high,digital,validation
+2,France,32,HIGH,urban,entry,contract,high,digital,trends
+2,France,32,HIGH,urban,entry,contract,brand,digital,validation
+2,France,32,HIGH,urban,entry,contract,brand,digital,trends
+2,France,32,HIGH,urban,luxury,contract,high,digital,validation
+2,France,32,HIGH,urban,luxury,contract,high,digital,trends
+2,France,32,HIGH,urban,luxury,contract,brand,digital,validation
+2,France,32,HIGH,urban,luxury,contract,brand,digital,trends
+2,France,32,HIGH,urban,modern,contract,high,digital,validation
+2,France,32,HIGH,urban,modern,contract,high,digital,trends
+2,France,32,HIGH,urban,modern,contract,brand,digital,validation
+2,France,32,HIGH,urban,modern,contract,brand,digital,trends
+2,France,32,HIGH,urban,executive,contract,high,digital,validation
+2,France,32,HIGH,urban,executive,contract,high,digital,trends
+2,France,32,HIGH,urban,executive,contract,brand,digital,validation
+2,France,32,HIGH,urban,executive,contract,brand,digital,trends
+2,France,32,HIGH,megacity,entry,contract,high,digital,validation
+2,France,32,HIGH,megacity,entry,contract,high,digital,trends
+2,France,32,HIGH,megacity,entry,contract,brand,digital,validation
+2,France,32,HIGH,megacity,entry,contract,brand,digital,trends
+2,France,32,HIGH,megacity,luxury,contract,high,digital,validation
+2,France,32,HIGH,megacity,luxury,contract,high,digital,trends
+2,France,32,HIGH,megacity,luxury,contract,brand,digital,validation
+2,France,32,HIGH,megacity,luxury,contract,brand,digital,trends
+2,France,32,HIGH,megacity,modern,contract,high,digital,validation
+2,France,32,HIGH,megacity,modern,contract,high,digital,trends
+2,France,32,HIGH,megacity,modern,contract,brand,digital,validation
+2,France,32,HIGH,megacity,modern,contract,brand,digital,trends
+2,France,32,HIGH,megacity,executive,contract,high,digital,validation
+2,France,32,HIGH,megacity,executive,contract,high,digital,trends
+2,France,32,HIGH,megacity,executive,contract,brand,digital,validation
+2,France,32,HIGH,megacity,executive,contract,brand,digital,trends
+2,Switzerland,32,HIGH,urban,entry,contract,high,digital,validation
+2,Switzerland,32,HIGH,urban,entry,contract,high,digital,trends
+2,Switzerland,32,HIGH,urban,entry,contract,brand,digital,validation
+2,Switzerland,32,HIGH,urban,entry,contract,brand,digital,trends
+2,Switzerland,32,HIGH,urban,luxury,contract,high,digital,validation
+2,Switzerland,32,HIGH,urban,luxury,contract,high,digital,trends
+2,Switzerland,32,HIGH,urban,luxury,contract,brand,digital,validation
+2,Switzerland,32,HIGH,urban,luxury,contract,brand,digital,trends
+2,Switzerland,32,HIGH,urban,modern,contract,high,digital,validation
+2,Switzerland,32,HIGH,urban,modern,contract,high,digital,trends
+2,Switzerland,32,HIGH,urban,modern,contract,brand,digital,validation
+2,Switzerland,32,HIGH,urban,modern,contract,brand,digital,trends
+2,Switzerland,32,HIGH,urban,executive,contract,high,digital,validation
+2,Switzerland,32,HIGH,urban,executive,contract,high,digital,trends
+2,Switzerland,32,HIGH,urban,executive,contract,brand,digital,validation
+2,Switzerland,32,HIGH,urban,executive,contract,brand,digital,trends
+2,Switzerland,32,HIGH,megacity,entry,contract,high,digital,validation
+2,Switzerland,32,HIGH,megacity,entry,contract,high,digital,trends
+2,Switzerland,32,HIGH,megacity,entry,contract,brand,digital,validation
+2,Switzerland,32,HIGH,megacity,entry,contract,brand,digital,trends
+2,Switzerland,32,HIGH,megacity,luxury,contract,high,digital,validation
+2,Switzerland,32,HIGH,megacity,luxury,contract,high,digital,trends
+2,Switzerland,32,HIGH,megacity,luxury,contract,brand,digital,validation
+2,Switzerland,32,HIGH,megacity,luxury,contract,brand,digital,trends
+2,Switzerland,32,HIGH,megacity,modern,contract,high,digital,validation
+2,Switzerland,32,HIGH,megacity,modern,contract,high,digital,trends
+2,Switzerland,32,HIGH,megacity,modern,contract,brand,digital,validation
+2,Switzerland,32,HIGH,megacity,modern,contract,brand,digital,trends
+2,Switzerland,32,HIGH,megacity,executive,contract,high,digital,validation
+2,Switzerland,32,HIGH,megacity,executive,contract,high,digital,trends
+2,Switzerland,32,HIGH,megacity,executive,contract,brand,digital,validation
+2,Switzerland,32,HIGH,megacity,executive,contract,brand,digital,trends
+3,China,34,HIGH,urban,urban,digital,low,digital ,luxury
+3,China,34,HIGH,urban,urban,digital,low,digital ,experience
+3,China,34,HIGH,urban,urban,digital,brand,digital ,luxury
+3,China,34,HIGH,urban,urban,digital,brand,digital ,experience
+3,China,34,HIGH,urban,large,digital,low,digital ,luxury
+3,China,34,HIGH,urban,large,digital,low,digital ,experience
+3,China,34,HIGH,urban,large,digital,brand,digital ,luxury
+3,China,34,HIGH,urban,large,digital,brand,digital ,experience
+3,China,34,HIGH,large,urban,digital,low,digital ,luxury
+3,China,34,HIGH,large,urban,digital,low,digital ,experience
+3,China,34,HIGH,large,urban,digital,brand,digital ,luxury
+3,China,34,HIGH,large,urban,digital,brand,digital ,experience
+3,China,34,HIGH,large,large,digital,low,digital ,luxury
+3,China,34,HIGH,large,large,digital,low,digital ,experience
+3,China,34,HIGH,large,large,digital,brand,digital ,luxury
+3,China,34,HIGH,large,large,digital,brand,digital ,experience
+3,Brasil,34,HIGH,urban,urban,digital,low,digital ,luxury
+3,Brasil,34,HIGH,urban,urban,digital,low,digital ,experience
+3,Brasil,34,HIGH,urban,urban,digital,brand,digital ,luxury
+3,Brasil,34,HIGH,urban,urban,digital,brand,digital ,experience
+3,Brasil,34,HIGH,urban,large,digital,low,digital ,luxury
+3,Brasil,34,HIGH,urban,large,digital,low,digital ,experience
+3,Brasil,34,HIGH,urban,large,digital,brand,digital ,luxury
+3,Brasil,34,HIGH,urban,large,digital,brand,digital ,experience
+3,Brasil,34,HIGH,large,urban,digital,low,digital ,luxury
+3,Brasil,34,HIGH,large,urban,digital,low,digital ,experience
+3,Brasil,34,HIGH,large,urban,digital,brand,digital ,luxury
+3,Brasil,34,HIGH,large,urban,digital,brand,digital ,experience
+3,Brasil,34,HIGH,large,large,digital,low,digital ,luxury
+3,Brasil,34,HIGH,large,large,digital,low,digital ,experience
+3,Brasil,34,HIGH,large,large,digital,brand,digital ,luxury
+3,Brasil,34,HIGH,large,large,digital,brand,digital ,experience
+3,Canada,34,HIGH,urban,urban,digital,low,digital ,luxury
+3,Canada,34,HIGH,urban,urban,digital,low,digital ,experience
+3,Canada,34,HIGH,urban,urban,digital,brand,digital ,luxury
+3,Canada,34,HIGH,urban,urban,digital,brand,digital ,experience
+3,Canada,34,HIGH,urban,large,digital,low,digital ,luxury
+3,Canada,34,HIGH,urban,large,digital,low,digital ,experience
+3,Canada,34,HIGH,urban,large,digital,brand,digital ,luxury
+3,Canada,34,HIGH,urban,large,digital,brand,digital ,experience
+3,Canada,34,HIGH,large,urban,digital,low,digital ,luxury
+3,Canada,34,HIGH,large,urban,digital,low,digital ,experience
+3,Canada,34,HIGH,large,urban,digital,brand,digital ,luxury
+3,Canada,34,HIGH,large,urban,digital,brand,digital ,experience
+3,Canada,34,HIGH,large,large,digital,low,digital ,luxury
+3,Canada,34,HIGH,large,large,digital,low,digital ,experience
+3,Canada,34,HIGH,large,large,digital,brand,digital ,luxury
+3,Canada,34,HIGH,large,large,digital,brand,digital ,experience
+4,Sweden,47,LOW,rural,used,phone,low,digital,price
+4,Sweden,47,LOW,rural,used,phone,low,digital,quality
+4,Sweden,47,LOW,rural,used,phone,low,digital,service
+4,Sweden,47,LOW,rural,mid,phone,low,digital,price
+4,Sweden,47,LOW,rural,mid,phone,low,digital,quality
+4,Sweden,47,LOW,rural,mid,phone,low,digital,service
+4,Sweden,47,LOW,small,used,phone,low,digital,price
+4,Sweden,47,LOW,small,used,phone,low,digital,quality
+4,Sweden,47,LOW,small,used,phone,low,digital,service
+4,Sweden,47,LOW,small,mid,phone,low,digital,price
+4,Sweden,47,LOW,small,mid,phone,low,digital,quality
+4,Sweden,47,LOW,small,mid,phone,low,digital,service
+4,Switzerland,47,LOW,rural,used,phone,low,digital,price
+4,Switzerland,47,LOW,rural,used,phone,low,digital,quality
+4,Switzerland,47,LOW,rural,used,phone,low,digital,service
+4,Switzerland,47,LOW,rural,mid,phone,low,digital,price
+4,Switzerland,47,LOW,rural,mid,phone,low,digital,quality
+4,Switzerland,47,LOW,rural,mid,phone,low,digital,service
+4,Switzerland,47,LOW,small,used,phone,low,digital,price
+4,Switzerland,47,LOW,small,used,phone,low,digital,quality
+4,Switzerland,47,LOW,small,used,phone,low,digital,service
+4,Switzerland,47,LOW,small,mid,phone,low,digital,price
+4,Switzerland,47,LOW,small,mid,phone,low,digital,quality
+4,Switzerland,47,LOW,small,mid,phone,low,digital,service
+4,Germany,47,LOW,rural,used,phone,low,digital,price
+4,Germany,47,LOW,rural,used,phone,low,digital,quality
+4,Germany,47,LOW,rural,used,phone,low,digital,service
+4,Germany,47,LOW,rural,mid,phone,low,digital,price
+4,Germany,47,LOW,rural,mid,phone,low,digital,quality
+4,Germany,47,LOW,rural,mid,phone,low,digital,service
+4,Germany,47,LOW,small,used,phone,low,digital,price
+4,Germany,47,LOW,small,used,phone,low,digital,quality
+4,Germany,47,LOW,small,used,phone,low,digital,service
+4,Germany,47,LOW,small,mid,phone,low,digital,price
+4,Germany,47,LOW,small,mid,phone,low,digital,quality
+4,Germany,47,LOW,small,mid,phone,low,digital,service

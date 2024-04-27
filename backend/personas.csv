@@ -1,0 +1,5 @@
+PERSONA,STRONG LOCATION,AGE,INCOME LEVEL,LOCATION TYPE,VEHICLE PREFERENCES,SERVICE PREFERENCES,BRAND LOYALTY,DIGITAL ENGAGEMENT,PSYCHOLOGICAL TRAITS
+1,"USA, UK, Germany",39,HIGHEST,"rural, small, suburbs","large, luxury","phone, click","high, brand",traditional,"luxury, convenience, quality"
+2,"China, France, Switzerland",32,HIGH,"urban, megacity","entry, luxury, modern, executive",contract,"high, brand",digital,"validation, trends"
+3,"China, Brasil, Canada",34,HIGH,"urban, large","urban, large",digital,"low, brand",digital ,"luxury, experience"
+4,"Sweden, Switzerland, Germany",47,LOW,"rural, small","used, mid",phone,low,digital,"price, quality, service"
