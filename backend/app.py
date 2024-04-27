@@ -3,6 +3,8 @@ from flask_cors import CORS
 from openai import OpenAI
 import os
 from prompts import STAGE_1_PROMPT
+import json
+import re
 
 app = Flask(__name__)
 CORS(app)
@@ -12,6 +14,26 @@ client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
 
 # Dictionary to store chat histories by session ID
 chat_histories = {}
+
+
+def extract_json_from_text(text):
+    # Regular expression to find JSON-like patterns
+    json_pattern = re.compile(r"\{.*?\}", re.DOTALL)  # Matches JSON-like objects
+
+    matches = json_pattern.findall(text)  # Find all JSON-like patterns in the text
+
+    parsed_json = []
+
+    for match in matches:
+        try:
+            # Attempt to parse each JSON-like match
+            data = json.loads(match)
+            parsed_json.append(data)  # Append valid JSON objects
+        except json.JSONDecodeError:
+            # Ignore invalid JSON
+            pass
+
+    return parsed_json
 
 
 @app.route('/chat', methods=['POST'])
@@ -50,9 +72,11 @@ def chat():
     ai_response = response.choices[0].message.content.strip()
     chat_histories[session_id].append({"role": "assistant", "content": ai_response})
 
+    car_recommendations = extract_json_from_text(ai_response)
+
     # Return the response along with the session ID for future requests
     print(f"Session ID: {session_id}\n User: {user_message}\n AI: {ai_response}")
-    return jsonify({'response': ai_response, 'session_id': session_id})
+    return jsonify({'response': ai_response, 'session_id': session_id, 'car_recommendations': car_recommendations})
 
 
 if __name__ == '__main__':
