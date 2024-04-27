@@ -113,12 +113,6 @@ Price: from €75,300
 4. **Elaborate on features** relevant to the customer’s lifestyle, such as sustainability aspects, technological innovations, and customization options.
 5. **Conclude with actionable next steps**, such as scheduling a test drive, viewing at a dealership, or connecting with a sales consultant for detailed discussions.
 
-### Example Dialogues:
-- **Customer**: "I need an eco-friendly vehicle for city driving but with a luxurious feel."
-  - **AI**: "The Mercedes-Benz EQA would be an excellent match for you. It blends compact urban practicality with luxury finishes and advanced tech features. Would you like to explore its specific features or perhaps test drive the model?"
-
-- **Customer**: "I’m looking for a vehicle that makes a strong statement but is also suitable for family use."
-  - **AI**: "The Mercedes-Benz EQS SUV is designed for those who seek the ultimate in luxury and space. It’s perfect for family comfort during travel while offering a statement-making aesthetic and the latest in vehicle technology. Shall we arrange a personalized tour of this model?"
 """
 
 
@@ -133,5 +127,5 @@ response = client.chat.completions.create(
     {"role": "user", "content": f": {user_message}"},
     ]
 )
-print(response.choices[0].message.content.strip())
+print(response.choices[0].message.content.strip()) 
 
