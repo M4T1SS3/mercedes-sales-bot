@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 185, 188, 193;
+  --background-end-rgb: 82, 86, 97;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 185, 188, 193;
+    --background-end-rgb: 82, 86, 97;
+  }
+}
+
+/* Make the gradient from bottom left to top right in 30 degree angle */
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      60deg,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
