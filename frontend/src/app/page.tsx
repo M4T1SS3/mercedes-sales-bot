@@ -138,50 +138,60 @@ export default function Home() {
   // }, [showVideo, carRecommendations]);
 
   return (
-    <main className="container mx-auto p-4">
+    <main className="container mx-auto p-4 ">
       <h1 className="text-xl font-bold mb-2">Basic Chat Interface</h1>
 
-      {/* Display chat history */}
-      <div ref={chatContainerRef} className="chat-history">
-        {chatHistory.map((chat, index) => (
-          <div key={index} className={`chat-message ${chat.role}`}>
-            {chat.content}
-            {chat.carRecommendations &&
-              chat.carRecommendations.length > 0 && ( // Add this condition
-                <div>
-                  <br />
-                  <div className="car-recommendations">
-                    {chat.carRecommendations.map((recommendation, index) => (
-                      <div key={index} className="car-recommendation-panel">
-                        <div className="car-recomendation-panel">
-                        <h5>{recommendation.car_name}</h5>
-                        <Image
-                          src={carPhotoMap[recommendation.car_name]}
-                          alt={recommendation.car_name}
-                        />
-                        <ul>
-                          {recommendation.advantages.map((advantage, index) => (
-                            <li key={index}>{advantage}</li>
-                          ))}
-                        </ul>
-                        <button className="video-button"
-                          onClick={() => {
-                            setShowVideo(true);
-                            setVideoIndex(index);
-                          }}
-                        >
-                          Watch Video
-                        </button>
-
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
+      {chatHistory.length === 0 ? (
+        <div className="no-messages">
+          <div className="flex justify-center mb-4 chat-history">
+            <h2 className="text-4xl font-mercedes">Talk to Carista: Your Mercedes-Benz EV Assistant</h2>
           </div>
-        ))}
-      </div>
+        </div>
+      ) : (
+        <div ref={chatContainerRef} className="chat-history">
+          {chatHistory.map((chat, index) => (
+            <div key={index} className={`chat-message ${chat.role}`}>
+              {chat.content}
+              {chat.carRecommendations &&
+                chat.carRecommendations.length > 0 && ( // Add this condition
+                  <div>
+                    <br />
+                    <div className="car-recommendations">
+                      {chat.carRecommendations.map((recommendation, index) => (
+                        <div key={index} className="car-recommendation-panel">
+                          <div className="car-recomendation-panel">
+                            <h5>{recommendation.car_name}</h5>
+                            <Image
+                              src={carPhotoMap[recommendation.car_name]}
+                              alt={recommendation.car_name}
+                            />
+                            <ul>
+                              {recommendation.advantages.map(
+                                (advantage, index) => (
+                                  <li key={index}>{advantage}</li>
+                                )
+                              )}
+                            </ul>
+                            <button
+                              className="video-button"
+                              onClick={() => {
+                                setShowVideo(true);
+                                setVideoIndex(index);
+                              }}
+                            >
+                              Watch Video
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+            </div>
+          ))}
+        </div>
+      )}
+      {/* Display chat history */}
 
       {/* {showVideo && (
         <div className="video-panel">
@@ -257,7 +267,7 @@ export default function Home() {
             onChange={(e) => setMessage(e.target.value)}
             required
           />
-          <button type="submit" className="bg-blue-500 text-white p-2 ml-2">
+          <button type="submit" className="text-white p-2 ml-2">
             Send
           </button>
         </form>
