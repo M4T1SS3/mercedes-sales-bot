@@ -92,7 +92,7 @@ When the customer asks you to book a test drive or asks about financing/leasing 
 
 Do not print anything else if the customer asks you to book a test drive or asks about financing/leasing options.
 Always print this json after the customer has expressed interest in booking a test drive or inquiring about financing/leasing options.
-
+If the customer does not explicitly state that they want to book a test drive or ask about financing/leasing options, you should continue the conversation as usual.
 
 """
 
