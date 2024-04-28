@@ -82,11 +82,24 @@ button {
     color: white;
 }
 
-.car-recommendation-panel .video-button {
-  margin: 0 auto;
-  display: block;
-  text-align: center;
+
+.car-recommendation-panel {
+  position: relative; /* Add this */
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 10px;
+  padding-left: 20px;
+  margin: 10px;
+  width: 200px; /* adjust the width to your liking */
+  border-radius: 9px;
 }
+
+.car-recommendation-panel .video-button {
+  display: block; /* Add this */
+  margin: 10px auto; /* Add this */
+  text-align: center; /* Add this */
+}
+
 
 table {
     border-collapse: collapse;
@@ -109,14 +122,6 @@ table {
     justify-content: center;
   }
   
-  .car-recommendation-panel {
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
-    width: 200px; /* adjust the width to your liking */
-    border-radius: 9px;
-  }
   
   .car-recommendation-panel h5 {
     margin-top: 0;

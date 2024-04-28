@@ -48,7 +48,7 @@ const carVideoMap: { [key: string]: string } = {
   "EQS SUV": "https://www.youtube.com/embed/G1jGG7eziTA?si=QMHH0mLOO6lfEQ0Y",
   "G-Class Electric":
     "https://www.youtube.com/embed/mE_ZnkOgx8M?si=q8HiH-7TR4m6llGj",
-  EQT: "https://www.youtube.com/embed/8DwH28d9DCM?si=P-0SgsBA3YHlRBbq",
+  EQT: "https://www.youtube.com/embed/NCLtBBrHD9Q",
   EQV: "https://www.youtube.com/embed/EP7OGJaf4aM?si=fHivKrRuJK64-kXA",
 };
 
@@ -56,7 +56,8 @@ export default function Home() {
   const [chatHistory, setChatHistory] = useState<ChatMessage[]>([]);
   const [message, setMessage] = useState("");
   const [sessionId, setSessionId] = useState<string | null>(null); // Session ID can be null initially
-  const [carRecommendations, setCarRecommendations] = useState<string[]>([]); // Car recommendations are initially empty
+  const [carRecommendations, setCarRecommendations] = useState<CarRecommendation[]>([]);
+
   const chatContainerRef = useRef<HTMLDivElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [showVideo, setShowVideo] = useState(false);
