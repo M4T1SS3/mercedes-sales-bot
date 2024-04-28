@@ -95,7 +95,7 @@ def chat():
     ai_response = cut_json(ai_response)
 
     # Return the response along with the session ID for future requests
-    print(f"Session ID: {session_id}\n User: {user_message}\n AI: {ai_response}")
+    print(f"Session ID: {session_id}\n User: {user_message}\n AI: {ai_response} \n Car Recommendations: {car_recommendations}")
     return jsonify({'response': ai_response, 'session_id': session_id, 'car_recommendations': car_recommendations})
 
 

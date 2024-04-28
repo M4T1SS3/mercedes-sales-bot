@@ -4,6 +4,17 @@ import { useState, useEffect, useRef } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./app.css";
 import "./../styles/chat.css";
+import  Image  from "next/image"
+import EQE from "../car_pics/EQE.png";
+import EQS from "../car_pics/EQS.png";
+import EQA from "../car_pics/EQA.png";
+import EQB from "../car_pics/EQB.png";
+import EQE_SUV from "../car_pics/EQE_SUV.png";
+import EQS_SUV from "../car_pics/EQS_SUV.png";
+import G_Class from "../car_pics/G-Class.png";
+import EQT from "../car_pics/EQT.png";
+import EQV from "../car_pics/EQV.png";
+import { StaticImageData } from "next/image";
 
 type CarRecommendation = {
   car_name: string;
@@ -14,6 +25,30 @@ type ChatMessage = {
   role: string;
   content: string;
   carRecommendations?: CarRecommendation[];
+};
+
+// const carPhotoMap = {
+//   "EQE Sedan": require("../car_pics/EQE.png"),
+//   "EQS Sedan": require("../car_pics/EQS.png"),
+//   "EQA": require("../car_pics/EQA.png"),
+//   "EQB": require("../car_pics/EQB.png"),
+//   "EQE SUV": require("../car_pics/EQE_SUV.png"),
+//   "EQS SUV": require("../car_pics/EQS_SUV.png"),
+//   "G-Class Electric": require("../car_pics/G-Class.png"),
+//   "EQT": require("../car_pics/EQT.png"),
+//   "EQV": require("../car_pics/EQV.png"),
+// };
+
+const carPhotoMap: { [key: string]: StaticImageData } = {
+  "EQE Sedan": EQE,
+  "EQS Sedan": EQS,
+  "EQA": EQA,
+  "EQB": EQB,
+  "EQE SUV": EQE_SUV,
+  "EQS SUV": EQS_SUV,
+  "G-Class Electric": G_Class,
+  "EQT": EQT,
+  "EQV": EQV,
 };
 
 export default function Home() {
@@ -150,6 +185,7 @@ export default function Home() {
                     {chat.carRecommendations.map((recommendation, index) => (
                       <div key={index} className="car-recommendation-panel">
                         <h5>{recommendation.car_name}</h5>
+                        <Image src={carPhotoMap[recommendation.car_name]} alt={recommendation.car_name} />
                         <ul>
                           {recommendation.advantages.map((advantage, index) => (
                             <li key={index}>{advantage}</li>
