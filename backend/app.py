@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from openai import OpenAI
 import os
-from prompts import STAGE_1_PROMPT
+from prompts import STAGE_1_PROMPT, STAGE_2_PROMPT
 import json
 import re
 
@@ -14,6 +14,7 @@ client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
 
 # Dictionary to store chat histories by session ID
 chat_histories = {}
+chat_stages = {}
 
 
 def extract_json_from_text(text):
@@ -70,6 +71,7 @@ def chat():
 
     if session_id not in chat_histories:
         chat_histories[session_id] = []  # initialize the chat history for this session
+        chat_stages[session_id] = 1  # initialize the chat stage for this session
 
     # Add the user's message to the chat history
     chat_histories[session_id].append({"role": "user", "content": user_message})
@@ -77,9 +79,14 @@ def chat():
     # Prepare the chat context from history
     chat_context = chat_histories[session_id]  # get chat history for this session
 
+    if chat_stages[session_id] == 1:
+        prompt = STAGE_1_PROMPT
+    else:
+        prompt = STAGE_2_PROMPT
+
     # Add system instructions if it's the first message
     if len(chat_context) == 1:
-        chat_context.insert(0, {"role": "system", "content": STAGE_1_PROMPT})
+        chat_context.insert(0, {"role": "system", "content": prompt})
 
     # Get response from OpenAI
     response = client.chat.completions.create(
@@ -92,11 +99,17 @@ def chat():
     chat_histories[session_id].append({"role": "assistant", "content": ai_response})
 
     car_recommendations = extract_json_from_text(ai_response)
-    ai_response = cut_json(ai_response)
+
+    if car_recommendations and chat_stages[session_id] == 1:
+        chat_stages[session_id] = 2
+
+    if chat_stages[session_id] == 1:
+        ai_response = cut_json(ai_response)
 
     # Return the response along with the session ID for future requests
-    print(f"Session ID: {session_id}\n User: {user_message}\n AI: {ai_response}")
-    return jsonify({'response': ai_response, 'session_id': session_id, 'car_recommendations': car_recommendations})
+    print(f"Session ID: {session_id}\n User: {user_message}\n AI: {ai_response} CAR RECOMMENDATIONS: {car_recommendations}\n")
+    return jsonify({'response': ai_response, 'session_id': session_id, 'car_recommendations': car_recommendations,
+                    'end_of_chat': False})
 
 
 if __name__ == '__main__':
