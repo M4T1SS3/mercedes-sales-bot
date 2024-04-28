@@ -17,51 +17,6 @@ chat_histories = {}
 chat_stages = {}
 
 
-def extract_json_from_text_OLD(text):
-    print("Extracting JSON from text\n----------------------\n")
-    print(text)
-
-
-    # Regular expression to find JSON-like patterns
-    json_pattern = re.compile(r"\{.*?\}", re.DOTALL)  # Matches JSON-like objects
-
-    print("\n----------------------\n"
-          "JSON Pattern\n----------------------\n")
-    print(json_pattern)
-    print("\n----------------------\n"
-          "Text\n----------------------\n")
-
-    matches = json_pattern.findall(text)  # Find all JSON-like patterns in the text
-    if matches:
-
-        print("JOINING MATCHES\n----------------------\n")
-        print(','.join(matches))
-        print("\n----------------------\n")
-
-
-        JASONWEBBER = json.loads(','.join(matches))
-
-        print("JASONWEBBER\n----------------------\n")
-        print(JASONWEBBER)
-        print("\n----------------------\n")
-
-    parsed_json = []
-
-    for match in matches:
-        try:
-            # Attempt to parse each JSON-like match
-            data = json.loads(match)
-            parsed_json.append(data)  # Append valid JSON objects
-        except json.JSONDecodeError:
-            # Ignore invalid JSON
-            pass
-
-    print("Parsed JSON\n----------------------\n")
-    print(parsed_json)
-    print("\n----------------------\n")
-    return parsed_json
-
-
 def extract_json_from_text(text):
     # Regular expression to capture everything between the first and last curly braces
     json_pattern = re.compile(r"\{.*\}", re.DOTALL)  # Matches the first set of enclosing braces
