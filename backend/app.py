@@ -17,11 +17,33 @@ chat_histories = {}
 chat_stages = {}
 
 
-def extract_json_from_text(text):
+def extract_json_from_text_OLD(text):
+    print("Extracting JSON from text\n----------------------\n")
+    print(text)
+
+
     # Regular expression to find JSON-like patterns
     json_pattern = re.compile(r"\{.*?\}", re.DOTALL)  # Matches JSON-like objects
 
+    print("\n----------------------\n"
+          "JSON Pattern\n----------------------\n")
+    print(json_pattern)
+    print("\n----------------------\n"
+          "Text\n----------------------\n")
+
     matches = json_pattern.findall(text)  # Find all JSON-like patterns in the text
+    if matches:
+
+        print("JOINING MATCHES\n----------------------\n")
+        print(','.join(matches))
+        print("\n----------------------\n")
+
+
+        JASONWEBBER = json.loads(','.join(matches))
+
+        print("JASONWEBBER\n----------------------\n")
+        print(JASONWEBBER)
+        print("\n----------------------\n")
 
     parsed_json = []
 
@@ -34,7 +56,49 @@ def extract_json_from_text(text):
             # Ignore invalid JSON
             pass
 
+    print("Parsed JSON\n----------------------\n")
+    print(parsed_json)
+    print("\n----------------------\n")
     return parsed_json
+
+
+def extract_json_from_text(text):
+    # Regular expression to capture everything between the first and last curly braces
+    json_pattern = re.compile(r"\{.*\}", re.DOTALL)  # Matches the first set of enclosing braces
+
+    # Search for the entire JSON structure
+    match = json_pattern.search(text)  # Find the first JSON-like pattern
+
+    if match:
+        try:
+            json_content = match.group(0)  # The full JSON content
+
+
+            # Attempt to parse the JSON content
+            parsed_json = json.loads(json_content)
+
+            print("Parsed JSON\n----------------------\n")
+            print(parsed_json)
+            print("\n----------------------\n")
+
+
+            parsed_json = parsed_json.pop('car_recommendations')
+
+            print("Parsed JSON2\n----------------------\n")
+            print(parsed_json)
+            print("\n----------------------\n")
+
+
+            return parsed_json  # Return the parsed JSON
+        except json.JSONDecodeError:
+
+            # Handle invalid JSON
+            print("Failed to parse JSON")
+            return []
+    else:
+        # If no JSON pattern is found
+        print("No JSON found in the text")
+        return []
 
 
 def cut_json(text):
@@ -96,6 +160,7 @@ def chat():
 
     # Add the AI's response to the chat history
     ai_response = response.choices[0].message.content.strip()
+
     chat_histories[session_id].append({"role": "assistant", "content": ai_response})
 
     car_recommendations = extract_json_from_text(ai_response)
@@ -103,11 +168,11 @@ def chat():
     if car_recommendations and chat_stages[session_id] == 1:
         chat_stages[session_id] = 2
 
-    if chat_stages[session_id] == 1:
-        ai_response = cut_json(ai_response)
+    ai_response = cut_json(ai_response)
 
     # Return the response along with the session ID for future requests
-    print(f"Session ID: {session_id}\n User: {user_message}\n AI: {ai_response} CAR RECOMMENDATIONS: {car_recommendations}\n")
+    print(f"Session ID: {session_id}\n User: {user_message}\n AI: {ai_response}\n CAR RECOMMENDATIONS: "
+          f"{car_recommendations}\n Stage: {chat_stages[session_id]}\n")
     return jsonify({'response': ai_response, 'session_id': session_id, 'car_recommendations': car_recommendations,
                     'end_of_chat': False})
 
