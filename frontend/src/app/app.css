@@ -107,3 +107,31 @@ table {
   .car-recommendation-panel li {
     margin-bottom: 10px;
   }
+
+  .video-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .video-panel video {
+    width: 60%; /* adjust the width to your liking */
+    height: auto;
+    margin: 40px; /* add some margin to center the video */
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: large;
+  }

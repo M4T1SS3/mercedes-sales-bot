@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./app.css";
 import "./../styles/chat.css";
-import  Image  from "next/image"
+import Image from "next/image";
 import EQE from "../car_pics/EQE.png";
 import EQS from "../car_pics/EQS.png";
 import EQA from "../car_pics/EQA.png";
@@ -27,28 +27,29 @@ type ChatMessage = {
   carRecommendations?: CarRecommendation[];
 };
 
-// const carPhotoMap = {
-//   "EQE Sedan": require("../car_pics/EQE.png"),
-//   "EQS Sedan": require("../car_pics/EQS.png"),
-//   "EQA": require("../car_pics/EQA.png"),
-//   "EQB": require("../car_pics/EQB.png"),
-//   "EQE SUV": require("../car_pics/EQE_SUV.png"),
-//   "EQS SUV": require("../car_pics/EQS_SUV.png"),
-//   "G-Class Electric": require("../car_pics/G-Class.png"),
-//   "EQT": require("../car_pics/EQT.png"),
-//   "EQV": require("../car_pics/EQV.png"),
-// };
-
 const carPhotoMap: { [key: string]: StaticImageData } = {
   "EQE Sedan": EQE,
   "EQS Sedan": EQS,
-  "EQA": EQA,
-  "EQB": EQB,
+  EQA: EQA,
+  EQB: EQB,
   "EQE SUV": EQE_SUV,
   "EQS SUV": EQS_SUV,
   "G-Class Electric": G_Class,
-  "EQT": EQT,
-  "EQV": EQV,
+  EQT: EQT,
+  EQV: EQV,
+};
+
+const carVideoMap: { [key: string]: string } = {
+  "EQE Sedan": "https://www.youtube.com/embed/8y0Sqg7gzS8?si=udb4oFdr6FT5xIYK",
+  "EQS Sedan": "https://www.youtube.com/embed/vBAQ0fdn3sc?si=zht-E_1fjVs8fIug",
+  EQA: "https://www.youtube.com/embed/N2nqwVSFkn0?si=ADYObHJAviVZwtuN",
+  EQB: "https://www.youtube.com/embed/5VYKT6_KCCU?si=lj-PMJhFqltfBo0l",
+  "EQE SUV": "https://www.youtube.com/embed/3WGGS_mwPTs?si=3jQMGokzsq-R5HYh",
+  "EQS SUV": "https://www.youtube.com/embed/G1jGG7eziTA?si=QMHH0mLOO6lfEQ0Y",
+  "G-Class Electric":
+    "https://www.youtube.com/embed/mE_ZnkOgx8M?si=q8HiH-7TR4m6llGj",
+  EQT: "https://www.youtube.com/embed/8DwH28d9DCM?si=P-0SgsBA3YHlRBbq",
+  EQV: "https://www.youtube.com/embed/EP7OGJaf4aM?si=fHivKrRuJK64-kXA",
 };
 
 export default function Home() {
@@ -57,6 +58,9 @@ export default function Home() {
   const [sessionId, setSessionId] = useState<string | null>(null); // Session ID can be null initially
   const [carRecommendations, setCarRecommendations] = useState<string[]>([]); // Car recommendations are initially empty
   const chatContainerRef = useRef<HTMLDivElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const [showVideo, setShowVideo] = useState(false);
+  const [videoIndex, setVideoIndex] = useState(0);
 
   // Set a random UUID when the component is first rendered
   useEffect(() => {
@@ -105,6 +109,7 @@ export default function Home() {
         ]);
 
         setMessage(""); // Clear the message field
+        setCarRecommendations(data.car_recommendations);
       } else {
         console.error("Failed to fetch response from backend");
       }
@@ -112,12 +117,25 @@ export default function Home() {
       console.error("Error occurred:", error);
     }
   };
+
   useEffect(() => {
     if (chatContainerRef.current) {
       chatContainerRef.current.scrollTop =
         chatContainerRef.current.scrollHeight;
     }
   }, [chatHistory]);
+
+  // useEffect(() => {
+  //   if (showVideo && carRecommendations.length > 0) {
+  //     const firstRecommendation = carRecommendations[0];
+  //     if (iframeRef.current) {
+  //       const videoUrl = carVideoMap[firstRecommendation];
+  //       const videoId = videoUrl.split("v=").pop();
+  //       const iframeUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+  //       iframeRef.current.src = iframeUrl;
+  //     }
+  //   }
+  // }, [showVideo, carRecommendations]);
 
   return (
     <main className="container mx-auto p-4">
@@ -132,65 +150,27 @@ export default function Home() {
               chat.carRecommendations.length > 0 && ( // Add this condition
                 <div>
                   <br />
-                  {/* <h4>Car Recommendations</h4> */}
-                  {/* <ul>
-                    {chat.carRecommendations.map((recommendation, index) => (
-                      <li key={index}>
-                        <h5>{recommendation.car_name}</h5>
-                        <ul>
-                          {recommendation.advantages.map((advantage, index) => (
-                            <li key={index}>{advantage}</li>
-                          ))}
-                        </ul>
-                      </li>
-                    ))}
-                  </ul> */}
-                  {/* <table>
-                    <thead>
-                      <tr>
-                        <th>Car Name</th>
-                        <th>Advantages</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {chat.carRecommendations.map((recommendation, index) => (
-                        <tr key={index}>
-                          <td>{recommendation.car_name}</td>
-                          <td>
-                            <ul
-                              style={{
-                                listStyle: "disc",
-                                padding: 10,
-                                paddingLeft: 25,
-                                margin: 0,
-                              }}
-                            >
-                              {recommendation.advantages.map(
-                                (advantage, index) => (
-                                  <li
-                                    key={index}
-                                    style={{ display: "list-item" }}
-                                  >
-                                    {advantage}
-                                  </li>
-                                )
-                              )}
-                            </ul>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table> */}
                   <div className="car-recommendations">
                     {chat.carRecommendations.map((recommendation, index) => (
                       <div key={index} className="car-recommendation-panel">
                         <h5>{recommendation.car_name}</h5>
-                        <Image src={carPhotoMap[recommendation.car_name]} alt={recommendation.car_name} />
+                        <Image
+                          src={carPhotoMap[recommendation.car_name]}
+                          alt={recommendation.car_name}
+                        />
                         <ul>
                           {recommendation.advantages.map((advantage, index) => (
                             <li key={index}>{advantage}</li>
                           ))}
                         </ul>
+                        <button
+                          onClick={() => {
+                            setShowVideo(true);
+                            setVideoIndex(index);
+                          }}
+                        >
+                          Watch Video
+                        </button>
                       </div>
                     ))}
                   </div>
@@ -199,6 +179,56 @@ export default function Home() {
           </div>
         ))}
       </div>
+
+      {/* {showVideo && (
+        <div className="video-panel">
+          <button className="close-button" onClick={() => setShowVideo(false)}>
+            X
+          </button>
+          {carRecommendations.length > 0 ? (
+            <iframe
+              ref={iframeRef}
+              width="100%"
+              height="400"
+              src={carVideoMap[carRecommendations[videoIndex].car_name]}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          ) : (
+            <p>No video available</p>
+          )}
+        </div>
+      )} */}
+      {showVideo && (
+        <div
+          className="video-panel"
+          onClick={(e) => {
+            if ((e.target as HTMLElement).className === "video-panel") {
+              setShowVideo(false);
+            }
+          }}
+        >
+          <button className="close-button" onClick={() => setShowVideo(false)}>
+            X
+          </button>
+          {carRecommendations.length > 0 ? (
+            <iframe
+              ref={iframeRef}
+              width="100%"
+              height="400"
+              src={carVideoMap[carRecommendations[videoIndex].car_name]}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          ) : (
+            <p>No video available</p>
+          )}
+        </div>
+      )}
 
       {/* Form for sending messages */}
       <form onSubmit={handleSendMessage} className="mt-4 form-container">
