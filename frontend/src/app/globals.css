@@ -33,6 +33,15 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.font-mercedes {
+  font-family: 'CorporateS';
+}
+
+@font-face {
+  font-family: 'CorporateS';
+  src: url('../fonts/CorporateS.ttf') format('truetype');
+}
+
 
 
 @layer utilities {

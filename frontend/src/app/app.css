@@ -158,3 +158,17 @@ table {
     background-color: white;
     border-radius: large;
   }
+
+  button[type="submit"] {
+    background-color: #c5c9cc; /* Change this to your desired color */
+    color: #fff; /* Change this to your desired color */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #a2a5a8; /* Change this to your desired color */
+  }
