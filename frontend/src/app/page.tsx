@@ -139,7 +139,7 @@ export default function Home() {
 
   return (
     <main className="container mx-auto p-4 ">
-      <h1 className="text-xl font-bold mb-2">Basic Chat Interface</h1>
+      <h1 className="text-xl font-bold mb-2">Carista Chat Interface</h1>
 
       {chatHistory.length === 0 ? (
         <div className="no-messages">
