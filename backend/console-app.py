@@ -5,6 +5,7 @@ import os
 # Set OpenAI API key in environment variable
 client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
 
+messages = []
 system_message = """You are a sophisticated AI assistant, an expert in Mercedes-Benz’s electric vehicle lineup. Your role is to guide customers by providing personalized vehicle recommendations that match their specific lifestyles, preferences, and needs. With an in-depth knowledge of the unique features and benefits of each model in the electric range, you tailor your guidance to find the perfect Mercedes-Benz vehicle for each customer.
 
 ### Customer Persona Summaries:
@@ -115,17 +116,25 @@ Price: from €75,300
 
 """
 
+# Add the system's role message to the chat history
+messages.append({"role": "system", "content": system_message})
 
+while True:
+    # User inputs their question or message
+    user_message = input("Enter your question or message: ")
+    messages.append({"role": "user", "content": user_message})
 
-user_message = input("Enter prompt:")
-
-
-response = client.chat.completions.create(
-    model="gpt-3.5-turbo",
-    messages=[
-    {"role": "system", "content": "You are an assistant specializing in recommending Mercedes-Benz electric vehicles. The customer is looking for a new car."},
-    {"role": "user", "content": f": {user_message}"},
-    ]
-)
-print(response.choices[0].message.content.strip()) 
+    # Generate response from the model considering the full chat history
+    response = client.chat.completions.create(
+        model="gpt-3.5-turbo",
+        messages = messages
+    )
+    print(response.choices[0].message.content.strip()) 
+    
+    # Check if the user has any more questions after receiving a recommendation
+    if "recommendation" in response.choices[0].message['content'].lower():
+        follow_up = input("Do you have any more questions? (yes/no): ")
+        if follow_up.lower() == "no":
+            print("Thank you for chatting. Have a great day!")
+            break
 
