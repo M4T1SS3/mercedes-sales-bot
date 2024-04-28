@@ -89,6 +89,9 @@ def generate_persona_data(persona, num_records, deviation_prob=0.05, age_prob=0.
                 data[f'{attribute}_{i+1}'] = item_samples[:, i]
         else:
             data[attribute] = np.random.choice(distribution, num_records)
+    
+    # Add noise to the data
+    
 
     
     data['PERSONA'] = persona
