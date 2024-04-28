@@ -17,7 +17,7 @@ chat_histories = {}
 chat_stages = {}
 
 
-def extract_json_from_text(text):
+def extract_json_from_text(text, stage):
     # Regular expression to capture everything between the first and last curly braces
     json_pattern = re.compile(r"\{.*\}", re.DOTALL)  # Matches the first set of enclosing braces
 
@@ -36,13 +36,12 @@ def extract_json_from_text(text):
             print(parsed_json)
             print("\n----------------------\n")
 
-
-            parsed_json = parsed_json.pop('car_recommendations')
+            if stage == 1:
+                parsed_json = parsed_json.pop('car_recommendations')
 
             print("Parsed JSON2\n----------------------\n")
             print(parsed_json)
             print("\n----------------------\n")
-
 
             return parsed_json  # Return the parsed JSON
         except json.JSONDecodeError:
@@ -68,6 +67,9 @@ def cut_json(text):
 
         # Cut out everything after the JSON
         remaining_text = text[:json_start]  # Everything from the start to the end of the JSON
+
+        if remaining_text.endswith("```json"):
+            remaining_text = remaining_text[:-6]
 
         return remaining_text
     else:
@@ -118,10 +120,11 @@ def chat():
 
     chat_histories[session_id].append({"role": "assistant", "content": ai_response})
 
-    car_recommendations = extract_json_from_text(ai_response)
+    car_recommendations = extract_json_from_text(ai_response, chat_stages[session_id])
 
     if car_recommendations and chat_stages[session_id] == 1:
         chat_stages[session_id] = 2
+        chat_context.insert(0, {"role": "system", "content": STAGE_2_PROMPT})
 
     ai_response = cut_json(ai_response)
 
