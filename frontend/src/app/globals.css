@@ -25,7 +25,8 @@ html, body {
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      60deg,
+      /* 60deg, */
+      300deg,
       transparent,
       rgb(var(--background-end-rgb))
     )

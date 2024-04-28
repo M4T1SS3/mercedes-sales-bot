@@ -15,9 +15,11 @@
 
 /* Style for user message bubbles */
 .chat-message.user {
-    background-color: #d1e7dd; /* Light green */
+    background-color: #041e42; /* Light green */
     align-self: flex-end; /* Align to the right */
     text-align: right;
+    color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.1); /* Add shadow for depth */
 }
 
 /* Add speech bubble tail for user messages */
@@ -28,14 +30,16 @@
     right: -10px;
     border-width: 10px;
     border-style: solid;
-    border-color: transparent transparent transparent #d1e7dd; /* Match bubble color */
+    border-color: transparent transparent transparent #041e42; /* Match bubble color */
+
 }
 
 /* Style for assistant message bubbles */
 .chat-message.assistant {
-    background-color: #f8d7da; /* Light pink */
+    background-color: #c5c9cc; /* Light pink */
     align-self: flex-start; /* Align to the left */
     text-align: left;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 /* Add speech bubble tail for assistant messages */
@@ -60,10 +64,28 @@ input {
     flex: 1;
 }
 
+input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+
 button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
+}
+
+.video-button {
+    background-color: #041e42;
+    color: white;
+}
+
+.car-recommendation-panel .video-button {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
 }
 
 table {
@@ -93,6 +115,7 @@ table {
     padding: 10px;
     margin: 10px;
     width: 200px; /* adjust the width to your liking */
+    border-radius: 9px;
   }
   
   .car-recommendation-panel h5 {

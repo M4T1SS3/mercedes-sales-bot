@@ -153,6 +153,7 @@ export default function Home() {
                   <div className="car-recommendations">
                     {chat.carRecommendations.map((recommendation, index) => (
                       <div key={index} className="car-recommendation-panel">
+                        <div className="car-recomendation-panel">
                         <h5>{recommendation.car_name}</h5>
                         <Image
                           src={carPhotoMap[recommendation.car_name]}
@@ -163,7 +164,7 @@ export default function Home() {
                             <li key={index}>{advantage}</li>
                           ))}
                         </ul>
-                        <button
+                        <button className="video-button"
                           onClick={() => {
                             setShowVideo(true);
                             setVideoIndex(index);
@@ -171,6 +172,8 @@ export default function Home() {
                         >
                           Watch Video
                         </button>
+
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -231,7 +234,7 @@ export default function Home() {
       )}
 
       {/* Form for sending messages */}
-      <form onSubmit={handleSendMessage} className="mt-4 form-container">
+      {/* <form onSubmit={handleSendMessage} className="mt-4 form-container">
         <input
           type="text"
           className="border p-2"
@@ -243,7 +246,22 @@ export default function Home() {
         <button type="submit" className="bg-blue-500 text-white p-2 ml-2">
           Send
         </button>
-      </form>
+      </form> */}
+      {!showVideo && (
+        <form onSubmit={handleSendMessage} className="mt-4 form-container">
+          <input
+            type="text"
+            className="border p-2"
+            placeholder="Type your message..."
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required
+          />
+          <button type="submit" className="bg-blue-500 text-white p-2 ml-2">
+            Send
+          </button>
+        </form>
+      )}
     </main>
   );
 }
